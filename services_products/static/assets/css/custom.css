@@ -1,0 +1,96 @@
+.custom-login-form {
+    padding-top: 75px;
+}
+
+.custom-login-space {
+    padding-top: 75px;
+}
+
+.half-container {
+    width: 50%;
+    border: 1px dotted;
+    padding: 10px;
+}
+
+.create-product-headers {
+    text-align: center;
+    font-weight: 800;
+    background: #37517e;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.custom-button {
+    background: #37517e;
+}
+
+.create-product-centered {
+    text-align: center;
+}
+
+.float-container {
+    display: flex;
+}
+
+.float-child-right {
+    margin-left: 20px;
+}
+
+.show-headers {
+    text-align: center;
+    color: #37517e;
+}
+
+.show-info {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn-success-custom {
+  line-height: 8px;
+}
+
+.edit-options{
+    text-align: center;
+    display: block ruby;
+}
+.custom-pagination{
+  text-align: center;
+  font-size: 14px;
+}
+
+.custom-justify{
+    text-align: justify;
+}
+
+.account-delete{
+    background: red;
+    color: white;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.login-to-view{
+    border-bottom: 1px solid;
+}
+
+.page-intro{
+    font-size: 18px;
+    color: #37517e;
+    font-weight: 900;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.page-intro-left{
+    font-size: 15px;
+    color: #37517e;
+    font-weight: 700;
+    text-align: left;
+    padding-bottom: 15px;
+}
+
+.txt-alg{
+    text-align: justify;
+}
