@@ -23,15 +23,15 @@ Technical details:
 
 Apps included in the project:
 
--- Main app - it serves the home, about, and articles. 6 URLs
+-- Main app - it serves the home, about, and articles. 6 URLs and one template for each URL
 
--- Accounts app - it handles the account management including login, logout, registration, edit, password change, last viewed items, and delete. 8 URLs
+-- Accounts app - it handles the account management including login, logout, registration, edit, password change, last viewed items, and delete. 8 URLs and one template for each URL
 
--- Products app - it is responsible for creating, listing, editing, viewing, and deleting products. 6 URLs
+-- Products app - it is responsible for creating, listing, editing, viewing, and deleting products. 6 URLs and one template for each URL
 
--- Services app -  - it manages the creating, listing, editing, viewing, and deleting services. 6 URLs
+-- Services app -  - it manages the creating, listing, editing, viewing, and deleting services. 6 URLs and one template for each URL
 
--- Jobs app -  - it manages the creating, listing, editing, viewing, and deleting jobs. 6 URLs
+-- Jobs app -  - it manages the creating, listing, editing, viewing, and deleting jobs. 6 URLs and one template for each URL
 
 Other details:
 
@@ -44,5 +44,7 @@ Other details:
 -- Custom user model: Yes
 
 -- Available tests for: Models, Views and Validators
+
+-- Template inheritance - utilized
 
 
