@@ -17,7 +17,6 @@ from services_products import services
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -25,14 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-@6krhodd@eaomg@ltws!@5d3fz31=*1!&2wh!mtrv7(-^9*oe5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'softuni-project-it-marketplace.herokuapp.com'
 
 ]
-
 
 # Application definition
 
@@ -58,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'services_products.urls'
@@ -81,7 +80,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'services_products.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
@@ -96,7 +94,7 @@ WSGI_APPLICATION = 'services_products.wsgi.application'
 #     }
 # }
 
-#Heroku config
+# Heroku config
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -107,8 +105,6 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -128,7 +124,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -142,7 +137,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
@@ -151,10 +145,9 @@ STATIC_URL = 'static/'
 # STATICFILES_DIRS = [
 #     BASE_DIR / 'staticfiles',
 # ]
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_ROOT = BASE_DIR / 'mediafiles'
 MEDIA_URL = 'media/'
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -162,4 +155,3 @@ MEDIA_URL = 'media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'accounts.WebUser'
-
