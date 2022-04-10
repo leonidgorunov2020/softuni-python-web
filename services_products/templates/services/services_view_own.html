@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_content %}
+
+
+    <main id="main">
+        <div class="custom_login_form" style="padding-top: 100px;">
+
+            <div class="show-headers"><h1>Own Services</h1></div>
+            <div class="show-info">Own services: {{ one_time }} One Time |
+                {{ weekly }} Weekly | {{ monthly }} Monthly and {{ other }} Other<br>
+
+                {% if request.user.is_authenticated %}
+                <a href="{% url 'create product' %}" class="create-new-product btn btn-success btn-success-custom">Add product</a>
+                {% else %}
+                <a href="{% url 'create product' %}" class="create-new-product btn btn-success btn-success-custom">Login to add product</a>
+
+                {% endif %}
+
+            </div>
+
+
+            </div>
+            <div class="row custom_width">
+                {% for service in services %}
+                    <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0 aos-init aos-animate"
+                         data-aos="zoom-in" data-aos-delay="200">
+                        <div class="icon-box">
+                            <h5>{{ service.name }}</h5>
+                            <p>{{ service.description | truncatechars:50 }}</p>
+                            <p><a href="{% url 'service details' service.pk %}">View Product</a></p>
+                        </div>
+                    </div>
+                {% empty %}
+                    <li>Sorry, no available services in this list.</li>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="custom-pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+    </main>
+
+
+{% endblock %}

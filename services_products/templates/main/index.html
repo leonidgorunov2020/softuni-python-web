@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_content %}
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h1>Think, Develop, Sell ...</h1>
+          <h2>Marketplace for talented developers and designers</h2>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="{% url 'register user' %}" class="btn-get-started scrollto">Register account</a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="{% static 'assets/img/hero-img.png' %}" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <main id="main">
+<section class="inner-page">
+      <div class="container">
+
+          <div class="page-intro">
+              Welcome to the newest place where IT professionals meet the business
+          </div>
+
+          <div class="page-intro-left">
+              Useful Resources
+          </div>
+
+          <div class="row">
+              <div class="col txt-alg"><b>Easy Rules to Write Product Descriptions That Sell</b><br>
+              The customer is now on your page, looking for the perfect product that fits his/her need.
+The very last step is convincing the customer to click the "add to cart" button.
+                  How?<br><a href="{% url 'product review' %}">Read More...</a></div>
+  <div class="col txt-alg"><b>Write Effective Service Descriptions</b><br>
+              The way you write your product or service descriptions has a direct effect
+      on your sales figures, but many small business owners pay little attention to their
+      product or service descriptions.<br><a href="{% url 'service review' %}">Read More...</a></div>
+  <div class="col txt-alg"><b>Top Job Description - how to</b><br>
+              The job description should accurately reflect the duties and responsibilities
+      of the position. When well-written, it produces a realistic picture of a job and answers
+      the question, “What does the person in this role actually do?”<br><a href="{% url 'job review' %}">Read More...</a></div>
+    <div class="col txt-alg"><b>How to become a dev</b><br>
+              Software developers use their programming skills to create new software and update
+        existing applications. If you’re a creative thinker who enjoys problem solving, a career
+        as a software developer could be a good fit.<br><a href="{% url 'become dev' %}">Read More...</a></div>
+</div>
+      </div>
+    </section>
+  </main>
+
+{% endblock %}

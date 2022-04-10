@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_content %}
+
+
+    <main id="main">
+        <div class="custom-login-space">
+            <section class="inner-page">
+                <div class="container half-container">
+                    <div class="create-product-headers">{{ product.name }}</div>
+
+                    <div class="float-container">
+
+                        <div class="float-child">
+                            <div class="product-image"><img src="{{ product.screenshot.url }}" alt="{{ product.name }}"
+                                                            width="200px"></div>
+
+                        </div>
+
+                        <div class="float-child-right">
+                            <div class="product-description"><b>Description:</b> {{ product.description }}</div>
+                            <div class="product-type"><b>Type:</b> {{ product.type }}</div>
+                            {% if request.user.is_authenticated %}
+                            <div class="product-price"><b>Price:</b> {{ product.price }}</div>
+                            <div class="product-owner"><b>Owner / Publisher:</b> {{ product.user }}</div>
+                                <div class="product-owner"><b>View profile:</b> <a href="{% url 'profile view' product.user.id %}">Link</a></div>
+
+
+                            {% else %}
+                                <div class="login-to-view">
+                                To see more details, please <a href="{% url 'login user' %}">Login</a> or
+                                <a href="{% url 'register user' %}">Create Account</a>
+                                </div>
+                            {% endif %}
+                        </div>
+
+                    </div>
+                    {% if is_owner %}
+<div class="edit-options"><a href="{% url 'edit product' product.pk %}" class="btn btn-success btn-success-custom">Edit</a> <a href="{% url 'delete product' product.pk %}" class="btn btn-danger btn-success-custom">Delete</a></div>
+                    {% endif %}
+                </div>
+            </section>
+        </div>
+    </main>
+
+{% endblock %}

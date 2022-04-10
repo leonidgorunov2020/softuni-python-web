@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_content %}
+
+
+  <main id="main">
+<div class="custom-login-form">
+    <section class="inner-page">
+      <div class="container half-container">
+          <div class="create-product-headers">Last viewed items:</div>
+         <div class="float-container">
+
+                       <ul>
+                        {% if last_viewed_product %}
+                            <li>The last viewed product - <a href="{% url 'product details' last_viewed_product %}">Direct link</a></li>
+                        {% endif %}
+                        {% if last_viewed_service %}
+                            <li>The last viewed service - <a href="{% url 'service details' last_viewed_service %}">Direct link</a></li>
+                        {% endif %}
+                       {% if last_viewed_job %}
+                            <li>The last viewed job - <a href="{% url 'job details' last_viewed_job %}">Direct link</a></li>
+                        {% endif %}
+                        </ul>
+
+                    </div>
+
+      </div>
+    </section>
+</div>
+  </main>
+
+{% endblock %}

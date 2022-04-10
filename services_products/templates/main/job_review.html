@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_content %}
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h1>Think, Develop, Sell ...</h1>
+          <h2>Marketplace for talented developers and designers</h2>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="{% url 'register user' %}" class="btn-get-started scrollto">Register account</a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="{% static 'assets/img/hero-img.png' %}" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <main id="main">
+<section class="inner-page">
+      <div class="container">
+
+          <div class="page-intro">Writing an Effective Job Description</div>
+
+</div>
+<div class="container">
+    <p>The job description should accurately reflect the duties and responsibilities of
+        the position. When well-written, it produces a realistic picture of a job and answers
+        the question, &ldquo;What does the person in this role actually do?&rdquo;</p>
+<p>A job description not only describes the position&rsquo;s responsibilities, it sets the
+    foundation for recruiting, developing and retaining talent and also sets the stage for
+    optimum work performance by clarifying responsibilities, expected results, and evaluation of
+    performance. It is also an important component to maintaining an equitable compensation system
+    and ensuring legal compliance. The document should be revisited and updated in line with the annual
+    performance evaluation cycle.</p>
+<p>The job description contains sufficient information to describe major responsibilities and essential
+    functions as they exist today.&nbsp; They provide the information necessary to classify the position,
+    not the person; thus they are &ldquo;incumbent neutral&rdquo; and not based on any specific quality of
+    an incumbent (such as knowledge, skills, abilities, performance, dedication, loyalty, years of service,
+    or degree).&nbsp; The document <em>should not include every detail</em> of how and what work is performed
+    so that it remains useful even when minor changes occur. &nbsp;Job descriptions can be written as a joint
+    effort between supervisor and employee, but the supervisor must approve.</p>
+</div>
+    </section>
+  </main>
+
+{% endblock %}

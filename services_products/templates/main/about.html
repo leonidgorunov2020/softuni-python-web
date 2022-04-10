@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_content %}
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h1>Think, Develop, Sell ...</h1>
+          <h2>Marketplace for talented developers and designers</h2>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="{% url 'register user' %}" class="btn-get-started scrollto">Register account</a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="{% static 'assets/img/hero-img.png' %}" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <main id="main">
+<section class="inner-page">
+      <div class="container">
+
+          <div class="page-intro">About us</div>
+
+</div>
+<div class="container">
+<div class="staticbox">
+<div class="staticbox green-title">
+<div class="boxbody">
+<p>IT Marketplace is an award winning website, with over 10,000 new jobs advertised monthly. Having been online since 2022, we've worked with some of the biggest brands worldwide and have prided ourselves on the excellent customer service and outstanding, cost effective recruitment results we've delivered.</p>
+<p>In addition to IT Marketplace we also operate a network of niche websites that support our ability to generate specialist candidates and give the IT Marketplace Group an unrivalled position on the search engines.</p>
+</div>
+</div>
+</div>
+</div>
+    </section>
+  </main>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_content %}
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h1>Think, Develop, Sell ...</h1>
+          <h2>Marketplace for talented developers and designers</h2>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="{% url 'register user' %}" class="btn-get-started scrollto">Register account</a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="{% static 'assets/img/hero-img.png' %}" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <main id="main">
+<section class="inner-page">
+      <div class="container">
+
+          <div class="page-intro">
+              Easy Rules to Write Product Descriptions That Sell
+          </div>
+
+</div>
+<div class="container">
+<p>The customer is now on your page, looking for the perfect product that fits his/her need.</p>
+<p>The very last step is convincing the customer to click the "add to cart" button.</p>
+<p>How?</p>
+<h2>1. Know Who Your Target Audience is</h2>
+<p>The first step to writing product descriptions is to define your target audience.</p>
+<p>You want to be able to define which features would be of most interest to your potential buyers.</p>
+<p>This begins with understanding yourbuyer persona, a breakdown of the characteristics of your potential customers. Your buyer persona will help you understand which features will be most valuable to your customers.</p>
+<h2>2. Focus on the Product Benefits</h2>
+<p>As a business owner, you are understandably excited to share all of the qualities of your products. You want to show that your product has the best features and the most unique specs.</p>
+<p>The buyer, however, is not necessarily interested in the mundane features of the product. Instead, they want to know how it can benefit them.</p>
+<h2>3. Tell the Full Story</h2>
+<p>A good product description should give all relevant details, convince the buyer of its benefits, and pack an emotional punch.</p>
+<p>Emotions influence buyer behavior, so your product description is the perfect place to elicit emotions.</p>
+<p>How do you do this?</p>
+<p>By filling in any gaps that potential buyers may have about the product.</p>
+<h2>4. Use Natural Language and Tone</h2>
+<p>If you read your description aloud, does it sound like a real conversation that you would have with your friend?</p>
+<p>Or does it sound like a computer-generated string of words?</p>
+<p>If your product description isn&rsquo;t something that you would say to your friend about the product, then it&rsquo;s time to inject a little life into them.</p>
+</div>
+    </section>
+  </main>
+
+{% endblock %}

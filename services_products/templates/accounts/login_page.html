@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_content %}
+
+
+  <main id="main">
+<div class="custom-login-form">
+    <section class="inner-page">
+      <div class="container half-container">
+          <div class="create-product-headers">Login it to IT Marketplace:</div>
+         <div class="float-container" style="text-align: center;">
+
+                       <form method="POST">
+          {% csrf_token %}
+          {{ form.as_p }}
+             <button class="btn btn-primary mt-2" type="submit">Log in</button>
+      </form>
+
+                    </div>
+
+      </div>
+    </section>
+</div>
+  </main>
+
+{% endblock %}
+

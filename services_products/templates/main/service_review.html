@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_content %}
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h1>Think, Develop, Sell ...</h1>
+          <h2>Marketplace for talented developers and designers</h2>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="{% url 'register user' %}" class="btn-get-started scrollto">Register account</a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="{% static 'assets/img/hero-img.png' %}" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <main id="main">
+<section class="inner-page">
+      <div class="container">
+
+          <div class="page-intro">
+              Write Effective Service Descriptions
+          </div>
+
+</div>
+<div class="container">
+<h2 id="what-is-a-service-description"><strong>What is a Service Description?</strong></h2>
+<p><span style="font-weight: 400;">Since services greatly differ from products, especially in up-and-coming businesses, we need to consider them separately. A service description includes information about the service, how it&rsquo;s provided and used, and what the customers will get from this service.</span></p>
+<p><span style="font-weight: 400;">A description of the service includes its functional and non-functional properties, such as interfaces and usage &ndash; however, all of these factors greatly vary from one service to another.</span></p>
+<h2 id="why-are-product-descriptions-important"><strong>Why is a Product Description So Important?</strong></h2>
+<p><span style="font-weight: 400;">Did you know that </span>88% of customers research a product before they buy it? That&rsquo;s true whether they&rsquo;re shopping in a physical store or online.</p>
+<p><span style="font-weight: 400;">Today&rsquo;s tech-savvy customers want detailed information about any new product or service they&rsquo;re considering buying. And remember, as mentioned above, 20% of purchases are abandoned because customers can&rsquo;t find the detailed information they need.</span></p>
+<p><span style="font-weight: 400;">So, clearly, product and service descriptions do matter. But the question is, why?</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><strong>They highlight value</strong><span style="font-weight: 400;">.</span> <span style="font-weight: 400;">When a customer considers purchasing what you have to offer, the only question in their mind is, &ldquo;How is this going to benefit me?&rdquo; If your description answers that question, it can convince a potential customer to pull the trigger on a purchase.</span></li>
+<li style="font-weight: 400;" aria-level="1"><strong>They describe the benefits</strong><span style="font-weight: 400;">.</span> <span style="font-weight: 400;">Every product or service has features directly tied to its benefits. A good description emphasizes those benefits, increasing the desire for your products or services.</span></li>
+<li style="font-weight: 400;" aria-level="1"><strong>They showcase your unique selling point</strong><span style="font-weight: 400;">.</span> <span style="font-weight: 400;">What makes your products or services different from your competitors&rsquo;? A good description will clearly communicate that difference to your audience, so your offering stands apart from other, similar options in the market.</span></li>
+</ul>
+</div>
+    </section>
+  </main>
+
+{% endblock %}

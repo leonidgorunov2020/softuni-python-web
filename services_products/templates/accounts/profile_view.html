@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_content %}
+
+
+  <main id="main">
+<div class="custom-login-form">
+    <section class="inner-page">
+      <div class="container half-container">
+          <div class="create-product-headers">Profile view</div>
+         <div class="float-container">
+
+                        <div class="float-child">
+                            <div class="product-image"><img src="{{ profile.picture }}" alt="{{ profile.full_name }}"
+                                                            width="200px"></div>
+
+                        </div>
+
+                        <div class="float-child-right">
+                            <div class="product-description"><b>Name:</b> {{ profile.first_name }} {{ profile.last_name }}</div>
+                            <div class="product-type"><b>Date of birth:</b> {{ profile.date_of_birth }}</div>
+                            <div class="product-price"><b>Info:</b> {{ profile.personal_info }}</div>
+                            <div class="product-owner"><b>Contacts:</b> {{ profile.email }}</div>
+                            <div class="product-owner"><b>Gender:</b> {{ profile.gender }}</div>
+                        </div>
+
+                    </div>
+          {% if is_owner %}
+                        <div class="edit-options"><a href="{% url 'edit user' profile.pk %}"
+                             class="btn btn-success btn-success-custom">Edit</a>
+                            <div class="edit-options"><a href="{% url 'change user password'%}"
+                             class="btn btn-success btn-success-custom">Change password</a>
+                            <a href="{% url 'delete profile' profile.pk %}" class="btn btn-danger btn-success-custom"> Delete</a></div>
+                    {% endif %}
+      </div>
+    </section>
+</div>
+  </main>
+
+{% endblock %}

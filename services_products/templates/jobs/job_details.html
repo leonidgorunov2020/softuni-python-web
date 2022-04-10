@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_content %}
+
+
+    <main id="main">
+        <div class="custom-login-space">
+            <section class="inner-page">
+                <div class="container half-container">
+                    <div class="create-product-headers">{{ job.title }}</div>
+
+
+                        <div class="product-description"><b>Description:</b> {{ job.description }}</div>
+                            <div class="product-type"><b>Type:</b> {{ job.job_types }}</div>
+                            <div class="product-price"><b>Responsibilities:</b> {{ job.job_responsibilities }}</div>
+
+                {% if request.user.is_authenticated %}
+                            <div class="product-price"><b>Monthly salary:</b> {{ job.monthly_salary }}</div>
+                            <div class="product-owner"><b>Publisher:</b> {{ job.user }}</div>
+                    <div class="product-owner"><b>View profile:</b> <a href="{% url 'profile view' job.user.id %}">Link</a></div>
+                {% else %}
+                    <div class="login-to-view">
+                                To see more details, please <a href="{% url 'login user' %}">Login</a> or
+                                <a href="{% url 'register user' %}">Create Account</a>
+                                </div>
+                {% endif %}
+                    {% if is_owner %}
+<div class="edit-options"><a href="{% url 'edit job' job.pk %}" class="btn btn-success btn-success-custom">Edit</a> <a href="{% url 'delete job' job.pk %}" class="btn btn-danger btn-success-custom">Delete</a></div>
+                    {% endif %}
+                </div>
+            </section>
+        </div>
+    </main>
+
+{% endblock %}

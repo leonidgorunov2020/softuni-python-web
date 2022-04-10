@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_content %}
+
+
+  <main id="main">
+<div class="custom_login_form" style="padding-top: 100px;">
+    <section class="inner-page">
+      <div class="container ">
+         <form method="POST" action="{% url 'create product' %}">
+          {% csrf_token %}
+          {{ form }}
+             <button class="btn btn-primary mt-2" type="submit">Create Product</button>
+      </form>
+      </div>
+    </section>
+</div>
+  </main>
+
+{% endblock %}

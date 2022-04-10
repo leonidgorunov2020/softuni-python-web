@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_content %}
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h1>Think, Develop, Sell ...</h1>
+          <h2>Marketplace for talented developers and designers</h2>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="{% url 'register user' %}" class="btn-get-started scrollto">Register account</a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="{% static 'assets/img/hero-img.png' %}" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <main id="main">
+<section class="inner-page">
+      <div class="container">
+
+          <div class="page-intro">Become a Software Developer</div>
+
+</div>
+<div class="container">
+<p>Software developers use their programming skills to create new software and update existing applications. If you&rsquo;re a creative thinker who enjoys problem solving, a career as a software developer could be a good fit.</p>
+<p>Software is essential in nearly every industry, which means you can pursue a career in a field that aligns with your passions and interests. Learn more about this rapidly growing career, along with ten tips to help you get a job as a software developer.</p>
+<h2 id="0-what-does-a-software-developer-do">What does a software developer do?</h2>
+<p>Software developers are the creative force behind computer programs of all kinds. They design and write the code used to build everything from operating systems to apps to video games.&nbsp;</p>
+<p>In this role, you may be involved with every stage of the software development process, from figuring out what users need and how they'll use the software to rolling out a completed application. You may sometimes work with computer programmers, although many developers complete all the coding themselves.&nbsp;</p>
+<p>Day-to-day tasks might include:</p>
+<p>&nbsp;</p>
+<ul>
+<li>
+<p>Analyzing the needs of software users</p>
+</li>
+<li>
+<p>Designing, testing, and building software programs to meet user needs</p>
+</li>
+<li>
+<p>Creating models and diagrams that outline the code needed to create software and applications</p>
+</li>
+<li>
+<p>Performing maintenance and testing to keep software functioning&nbsp;</p>
+</li>
+<li>
+<p>Documenting the process to provide the information needed for upgrades and maintenance</p>
+</li>
+</ul>
+</div>
+    </section>
+  </main>
+
+{% endblock %}

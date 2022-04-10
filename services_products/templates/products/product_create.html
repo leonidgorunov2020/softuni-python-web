@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_content %}
+
+
+  <main id="main">
+<div class="custom-login-form">
+    <section class="inner-page">
+      <div class="container half-container">
+          <div class="create-product-headers">Create a product</div>
+         <form method="POST" action="{% url 'create product' %}" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ form }}
+             <div class="create-product-centered">
+                 <button class="btn btn-primary mt-2 custom-button" type="submit">Create Product</button>
+             </div>
+      </form>
+      </div>
+    </section>
+</div>
+  </main>
+
+{% endblock %}
