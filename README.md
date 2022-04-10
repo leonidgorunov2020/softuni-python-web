@@ -34,9 +34,15 @@ Services app -  - it manages the creating, listing, editing, viewing, and deleti
 Jobs app -  - it manages the creating, listing, editing, viewing, and deleting jobs. 6 URLs
 
 Other details:
+
 DB postgresql
+
 Front end: Free version of Arsha with custom CSS style
+
 Mobile ready: Yes
+
 Custom user model: Yes
+
 Available tests for: Models, Views and Validators
+
 
