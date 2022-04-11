@@ -9,4 +9,4 @@ class ProfileAdmin(admin.ModelAdmin):
 
     @admin.display(description='Name')
     def upper_case_name(self, obj):
-        return ("%s %s" % (obj.first_name, obj.last_name)).upper()
+        return ("%s %s" % (obj.first_name[0], obj.last_name[0])).upper()
