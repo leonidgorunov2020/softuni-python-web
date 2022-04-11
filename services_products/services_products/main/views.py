@@ -28,3 +28,12 @@ class BecomeDev(TemplateView):
 
 class About(TemplateView):
     template_name = 'main/about.html'
+
+
+def error_404(request, exception):
+   context = {}
+   return render(request, 'main/404.html', context)
+
+def error_500(request):
+   context = {}
+   return render(request, 'main/500.html', context)
