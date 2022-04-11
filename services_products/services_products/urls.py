@@ -1,9 +1,9 @@
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.shortcuts import render
-from django.template import RequestContext
 from django.urls import path, include
+
+from services_products.main import views
 
 urlpatterns = [
                   path('admin/', admin.site.urls),
