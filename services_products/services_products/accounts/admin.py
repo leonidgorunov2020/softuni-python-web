@@ -5,8 +5,5 @@ from services_products.accounts.models import Profile
 
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):
-    list_display = ('upper_case_name',)
+    list_display = ('first_name', 'last_name', 'email')
 
-    @admin.display(description='Name')
-    def upper_case_name(self, obj):
-        return ("%s %s" % (obj.first_name[0], obj.last_name[0])).upper()
