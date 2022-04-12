@@ -23,16 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-@6krhodd@eaomg@ltws!@5d3fz31=*1!&2wh!mtrv7(-^9*oe5'
+SECRET_KEY = os.getenv('SECRET_KEY', )
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = [
-    '127.0.0.1',
-    'softuni-project-it-marketplace.herokuapp.com'
-
-]
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(' ')
+APP_ENV = os.getenv('APP_ENV')
 
 # Application definition
 
@@ -85,28 +82,29 @@ WSGI_APPLICATION = 'services_products.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'servprod',
-#         'USER': 'postgres',
-#         'PASSWORD': '1123QwER',
-#         'HOST': '127.0.0.1',
-#         'PORT': '5432',
-#     }
-# }
 
-# Heroku config
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'de5ftu02g2gi3p',
-        'USER': 'mrduqtoravfetq',
-        'PASSWORD': '7919d9871fd1600672fa4752ac6c2770d3dda51ce5ae139307e84bbe4a2194e0',
-        'HOST': 'ec2-52-214-23-110.eu-west-1.compute.amazonaws.com',
-        'PORT': '5432',
+if APP_ENV == 'Prod':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'de5ftu02g2gi3p',
+            'USER': 'mrduqtoravfetq',
+            'PASSWORD': '7919d9871fd1600672fa4752ac6c2770d3dda51ce5ae139307e84bbe4a2194e0',
+            'HOST': 'ec2-52-214-23-110.eu-west-1.compute.amazonaws.com',
+            'PORT': '5432',
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'servprod',
+            'USER': 'postgres',
+            'PASSWORD': '1123QwER',
+            'HOST': '127.0.0.1',
+            'PORT': '5432',
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
